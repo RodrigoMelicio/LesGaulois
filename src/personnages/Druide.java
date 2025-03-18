@@ -23,11 +23,17 @@ public class Druide {
 	}
 
 	public void booster(Gaulois gaulois) {
+		String nomGaulois = gaulois.getNom();
 		if (chaudron.resterPotion()) {
-			chaudron.prendreLouche();
-			gaulois.boirePotion(forcePotion);
+			if (nomGaulois == "Obélix") {
+				gaulois.parler("Non, " + nomGaulois + " Non!...Et tu le sais trés bien !");
+			} else {
+				chaudron.prendreLouche();
+				gaulois.boirePotion(forcePotion);
+				gaulois.parler("Tiens " + nomGaulois + " un peu de potion logique.");
+			}
 		} else {
-			System.out.println("Le Druide " + nom + " : \"Désolé, plus de potion !\"");
+			gaulois.parler("Désole " + nomGaulois + "il n'y a plus une seulz goute de potion.");
 		}
 	}
 

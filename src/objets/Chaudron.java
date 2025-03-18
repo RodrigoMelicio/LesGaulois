@@ -13,9 +13,11 @@ public class Chaudron {
 		return quantitePotion > 0;
 	}
 
-	public void prendreLouche() {
+	public int prendreLouche() {
 		if (quantitePotion > 0) {
 			quantitePotion--;
+			
 		}
+		return forcePotion;
 	}
 }
