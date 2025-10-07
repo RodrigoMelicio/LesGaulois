@@ -3,6 +3,7 @@ package personnages;
 public class Gaulois {
 	private String nom;
 	private int force;
+	private Village village;
 	
 	public Gaulois(String nom, int force) {
 		this.nom = nom;
@@ -29,6 +30,16 @@ public class Gaulois {
 		return "Gaulois [nom=" + nom + ", force=" + force + "]";
 	}
 	
+	
+	
+	public Village getVillage() {
+		return village;
+	}
+
+	public void setVillage(Village village) {
+		this.village = village;
+	}
+
 	public void frapper(Romains romain) {
 		String nomRomain = romain.getNom();
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + nomRomain);
